@@ -12,7 +12,7 @@ mongoose.connect(
   }
 );
 
-app.use(express.json);
+app.use(express.json());
 app.use(routes);
 
 app.get('/', (req, res) => {
