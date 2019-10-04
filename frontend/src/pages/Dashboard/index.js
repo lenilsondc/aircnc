@@ -33,6 +33,22 @@ export default function Dashboard() {
     });
   }, [bookings, socket]);
 
+  async function handleAccept(booking_id) {
+    await api.post(`/bookings/${booking_id}/approvals`, null, {
+      headers: { user_id }
+    });
+
+    setBookings(bookings.filter(booking => booking._id !== booking_id));
+  }
+
+  async function handleReject(booking_id) {
+    await api.post(`/bookings/${booking_id}/rejections`, null, {
+      headers: { user_id }
+    });
+
+    setBookings(bookings.filter(booking => booking._id !== booking_id));
+  }
+
   return (
     <>
       <ul className="bookings">
@@ -43,8 +59,18 @@ export default function Dashboard() {
               em <strong>{booking.spot.company}</strong> para a data:{" "}
               <strong>{request.date}</strong>
             </p>
-            <button className="accept">ACEITAR</button>
-            <button className="reject">REJEITAR</button>
+            <button
+              onClick={() => handleAccept(booking._id)}
+              className="accept"
+            >
+              ACEITAR
+            </button>
+            <button
+              onClick={() => handleReject(booking._id)}
+              className="reject"
+            >
+              REJEITAR
+            </button>
           </li>
         ))}
       </ul>
