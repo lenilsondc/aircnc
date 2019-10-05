@@ -57,7 +57,7 @@ export default function Dashboard() {
             <p>
               <strong>{booking.user.email}</strong> está solicitando uma reserva
               em <strong>{booking.spot.company}</strong> para a data:{" "}
-              <strong>{request.date}</strong>
+              <strong>{booking.date}</strong>
             </p>
             <button
               onClick={() => handleAccept(booking._id)}
