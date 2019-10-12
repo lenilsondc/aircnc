@@ -49,16 +49,16 @@ In addition to that, the bookings activity notification would be made in real-ti
 
 ### Future
 
-The stack by itself is more than capable of making developers much more productive and confident to develop full stack products. Given that you can use the same language to build backend, frontend and mobile, and using the same lib to build user interfaces in both frontend and mobile make developer very multi functional. It has quite an advantage in reducing the learning curve and flexibility across the whole stack which is usually a different language and therefore a different approach on each tier of the stack.
+The stack by itself is more than capable of making developers much more productive and confident to develop full stack products. Given that you can use the same language to build backend, frontend and mobile, and using the same lib to build user interfaces in both frontend and mobile make developers multi functional. It has quite an advantage in reducing the learning curve and flexibility across the whole stack which is usually a different language and therefore a different approach on each tier of the stack.
 
-Although the project is very simple, it is a good proof of concept to exercise the development using the stack, it covers some important elements present in a normal application; however, the concepts approached on the course was very basic, which is good to introduce the whole stack during, but not enough for real life application.
+Although the project is very simple, it is a good proof of concept to exercise the development using the stack, it covers some important elements present in a normal application; however, the concepts approached on the course was very basic, which is good to introduce the whole stack during one week, but not enough for real life application.
 
 This let some room for improvement, meaning, this app is a good starting point to explore more solid and maintainable approaches to using these techs.
 
 #### For Example: Improvements
 
 - Style react components using styled-components instead of raw CSS which is easier to maintain
-- Use jwt to deal with authorization instead of raw headers which is more secure
+- Use jwt to deal with authorization instead of raw headers which is more secure and standard
 - Add validation for user inputs in all back, front and mobile
 - Add a better sign up and sign in system
 - Add a logoff feature
